@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LAMDA: A Longitudinal Android Malware Dataset for Analyzing Concept Drift">
+  <meta name="keywords" content="IQSecLab, LAMDA, A Longitudinal Android Malware Dataset for Analyzing Concept Drift">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAMDA: A Longitudinal Android Malware Dataset for Analyzing Concept Drift</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/Untitled.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://xyz.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Info
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://iqseclab.rahmanmsaidur.com/">
+            IQSecLab's Website
+          </a>
+          <a class="navbar-item" href="https://github.com/IQSeC-Lab">
+            IQSecLab's Github
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LAMDA: A Longitudinal Android Malware Dataset for Analyzing Concept Drift</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://a.com">Md Ahsanul Haque</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://a.com">Ismail Hossain</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://a.info">Md Mahmuduzzaman Kamol</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://a.edu/">Md Jahangir Alam</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://a.com">Suresh Kumar Amalapuram </a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.a.com">Mohammad Saidur Rahman</a><sup>1</sup>,
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Computer Science, University of Texas at El Paso</span>
+            <span class="author-block"><sup>2</sup>School of Informatics, University of Edinburgh</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://paperlink goes here"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/IQSeC-Lab/LAMDA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/IQSeC-Lab/LAMDA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-download"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper motivation -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Paper motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Abstract. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Machine learning-based malware detection systems are widely used for their ability to identify previously unseen threats. However, their effectiveness diminishes over time due to model degradation. As malware evolves, these models suffer from concept drift, where shifts in data distribution gradually lead to a decline in detection accuracy. To address this issue, it is essential to train models on datasets covering longer periods, as this is essential for revealing long-term trends and patterns. In this paper, we present a novel dataset designed to analyze the effects of concept drift on Android malware detection. Our dataset spans from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, totaling 1,032,497 entries. By highlighting the performance degradation over time, we emphasize the need for datasets that reflect evolving threats and propose methods to mitigate drift through continuous retraining.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset Preparation -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Preparation</h2>
+        <div class="content has-text-justified">
+          <p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Experiment Results -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Machine learning-based malware detection systems are widely used for their ability to identify previously unseen threats. However, their effectiveness diminishes over time due to model degradation. As malware evolves, these models suffer from concept drift, where shifts in data distribution gradually lead to a decline in detection accuracy. To address this issue, it is essential to train models on datasets covering longer periods, as this is essential for revealing long-term trends and patterns. In this paper, we present a novel dataset designed to analyze the effects of concept drift on Android malware detection. Our dataset spans from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, totaling 1,032,497 entries. By highlighting the performance degradation over time, we emphasize the need for datasets that reflect evolving threats and propose methods to mitigate drift through continuous retraining.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Key Contributions. -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contributions</h2>
+        <div class="content has-text-justified">
+          <p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+             </ul>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- How to Use this Dataset 101 -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How to Use this Dataset 101</h2>
+        <div class="content has-text-justified">
+          <p>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </li>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Limitations & Future Works -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Limitations & Future Works</h2>
+        <div class="content has-text-justified">
+          <p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </li>
+             </ul>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{testIQSEC-Lab,
+  author    = {Author A, Author B, Author C, Author D, Author E, Author F},
+  title     = {LAMDA: A Longitudinal Android Malware Dataset for Analyzing Concept Drift},
+  journal   = {NurIPS},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/images/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/IQSeC-Lab" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This page was built with the following projects: <a
+              href="https://github.com/nerfies/nerfies.github.io">HyperGLM</a> and <a
+              href="https://uark-cviu.github.io/projects/HyperGLM/">NERFIES</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
