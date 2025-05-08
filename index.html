@@ -169,8 +169,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Machine learning-based malware detection systems are widely used for their ability to identify previously unseen threats. However, their effectiveness diminishes over time due to model degradation. As malware evolves, these models suffer from concept drift, where shifts in data distribution gradually lead to a decline in detection accuracy. To address this issue, it is essential to train models on datasets covering longer periods, as this is essential for revealing long-term trends and patterns. In this paper, we present a novel dataset designed to analyze the effects of concept drift on Android malware detection. Our dataset spans from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, totaling 1,032,497 entries. By highlighting the performance degradation over time, we emphasize the need for datasets that reflect evolving threats and propose methods to mitigate drift through continuous retraining.
-
+            Machine learning-based malware detection systems are widely used for 
+            their ability to identify previously unseen threats. However, their 
+            effectiveness diminishes over time due to model degradation. As malware evolves, 
+            these models suffer from concept drift, where shifts in data distribution gradually
+             lead to a decline in detection accuracy. To address this issue, it is essential to 
+             train models on datasets covering longer periods, as this is essential for revealing 
+             long-term trends and patterns. In this paper, we present a novel dataset designed to 
+             analyze the effects of concept drift on Android malware detection. Our dataset spans 
+             from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, 
+             totaling 1,032,497 entries. By highlighting the performance degradation over time, 
+             we emphasize the need for datasets that reflect evolving threats and propose methods 
+             to address concept drift.
           </p>
 
         </div>
@@ -213,7 +223,7 @@
         <h2 class="title is-3">Experiment Results</h2>
         <div class="content has-text-justified">
           <p>
-            Machine learning-based malware detection systems are widely used for their ability to identify previously unseen threats. However, their effectiveness diminishes over time due to model degradation. As malware evolves, these models suffer from concept drift, where shifts in data distribution gradually lead to a decline in detection accuracy. To address this issue, it is essential to train models on datasets covering longer periods, as this is essential for revealing long-term trends and patterns. In this paper, we present a novel dataset designed to analyze the effects of concept drift on Android malware detection. Our dataset spans from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, totaling 1,032,497 entries. By highlighting the performance degradation over time, we emphasize the need for datasets that reflect evolving threats and propose methods to mitigate drift through continuous retraining.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
           </p>
 
@@ -222,7 +232,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- Key Contributions. -->
 <section class="section hero is-light">
@@ -234,10 +243,24 @@
           <p>
             <ul>
               <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                A large-scale Android malware benchmark comprising over 1 million
+                APKs across 1,430 unique families, spanning 2013–2025 (excluding 2015), with additional
+                singleton samples. It is the most temporally comprehensive dataset for Android malware
+                analysis to date.
               </li>
               <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Built on execution-free static features—API calls, permissions, and manifest
+                components—extracted using a standardized schema, enabling scalable, reproducible,
+                and temporally aligned drift analysis.
+              </li>
+              <li>
+                Longitudinal evaluations under temporal drift using structured splits, showing that
+                malware classifiers degrade significantly over time and that family-level behavior
+                evolves in measurable, feature-space terms.
+              </li>
+              <li>
+                Facilitates explanation-driven drift analysis through SHAP-based attributions,
+                supporting investigations into how feature importance shifts as malware evolves.  
               </li>
              </ul>
           </p>
@@ -301,10 +324,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{testIQSEC-Lab,
-  author    = {Author A, Author B, Author C, Author D, Author E, Author F},
+    <pre><code>@article{LAMDA2025,
+  author    = {Md Ahsanul Haque and Ismail Hossain and Md Mahmuduzzaman Kamol and Md Jahangir Alam and Suresh Kumar Amalapuram and Mohammad Saidur Rahman},
   title     = {LAMDA: A Longitudinal Android Malware Dataset for Analyzing Concept Drift},
-  journal   = {NurIPS},
+  journal   = {NeurIPS},
   year      = {2025},
 }</code></pre>
   </div>
@@ -313,18 +336,9 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/images/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/IQSeC-Lab" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
