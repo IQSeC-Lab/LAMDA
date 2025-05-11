@@ -139,7 +139,7 @@
 </section>
 
 <!-- Paper motivation -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -160,7 +160,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- Abstract. -->
@@ -172,18 +172,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Machine learning-based malware detection systems are widely used for 
-            their ability to identify previously unseen threats. However, their 
-            effectiveness diminishes over time due to model degradation. As malware evolves, 
-            these models suffer from concept drift, where shifts in data distribution gradually
-             lead to a decline in detection accuracy. To address this issue, it is essential to 
-             train models on datasets covering longer periods, as this is essential for revealing 
-             long-term trends and patterns. In this paper, we present a novel dataset designed to 
-             analyze the effects of concept drift on Android malware detection. Our dataset spans 
-             from 2013 to 2025 (excluding 2015) and includes both malware and benign samples, 
-             totaling 1,032,497 entries. By highlighting the performance degradation over time, 
-             we emphasize the need for datasets that reflect evolving threats and propose methods 
-             to address concept drift.
+          Machine learning (ML)-based malware detection systems often fail to account for the dynamic nature of 
+            real-world training and test data distributions. In practice, these distributions evolve due to 
+            frequent changes in the Android ecosystem, adversarial development of new malware families, 
+            and the continuous emergence of both benign and malicious applications. 
+            Prior studies have shown that such {\em concept drift} --- distributional shifts in benign and malicious samples, 
+            leads to significant degradation in detection performance over time. Despite the practical importance of this issue, 
+            existing datasets are often outdated and limited in temporal scope, diversity of malware families, 
+            and sample scale, making them insufficient for the systematic evaluation of concept drift in malware detection. 
+          </p>
+          <p>
+          To address this gap, we present \system, the largest and most temporally diverse Android malware benchmark to date, 
+            designed specifically for concept drift analysis. \system~spans 12 years (2013–2025, excluding 2015), 
+            includes over 1 million samples (approximately 37\% labeled as malware), 
+            and covers more than 1,400 malware families and 180,000 singleton samples, 
+            reflecting the natural distribution and evolution of real-world Android applications. 
+            We empirically demonstrate \system's utility by quantifying the performance degradation of 
+            standard ML models over time and analyzing feature stability across years. 
+            As the most comprehensive Android malware dataset to date, 
+            \system~enables in-depth research into temporal drift and generalization, 
+            explainability, and evolving detection challenges. 
+            The dataset and code are available at \url{https://iqsec-lab.github.io/LAMDA/}.
           </p>
 
         </div>
