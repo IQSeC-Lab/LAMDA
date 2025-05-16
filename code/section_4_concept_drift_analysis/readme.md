@@ -36,5 +36,19 @@ For LAMDA experiments, go through the following instructions to recreate the res
    ```
    python anoshift_experiment_api_graph.py
    ```
+   
+   We select the top 100 malware families from the LAMDA dataset and compute their stability scores over time. These scores are then compared with the corresponding families found in the APIGraph dataset. The code below generates a combined box plot illustrating the stability scores for both LAMDA and APIGraph. It also includes feature analysis based on Optimal Transport Dataset Distance (OTDD) for both datasets. Further details can be found in Sections 4.3 of the paper.
+
+   ```
+   4_3_lambda_stability_otdd_analysis.ipynb
+   4_3_apigraph_stability_otdd_analysis.ipynb
+   ```
+
+   Furthermore we get 10 common families across all years (2013-2024) and we calculate the feature stability for each individual family from the year 2013 to year 2024. We add the cade evaluation result on test data (2014-2024) in terms of Drift and Non-drift samples. Details are available in the paper Section 4.4. 
+
+   ```
+   4_4_stability_analysis_common_families.ipynb
+   4_4_cade_evaluation_common_families.ipynb
+   ```
 
 
