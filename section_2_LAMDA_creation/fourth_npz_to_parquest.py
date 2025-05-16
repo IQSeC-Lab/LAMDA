@@ -41,12 +41,12 @@ mapping_df = pd.DataFrame({
 })
 mapping_file = os.path.join(output_path, "feature_mapping.csv")
 mapping_df.to_csv(mapping_file, index=False)
-logging.info(f"✅ Saved feature mapping to {mapping_file}")
+logging.info(f" Saved feature mapping to {mapping_file}")
 
 # === Function to convert a single year ===
 def process_year(year):
     try:
-        logging.info(f"🚀 Starting {year}")
+        logging.info(f" Starting {year}")
 
         # Load metadata
         meta_train = np.load(os.path.join(input_path, f"{year}_meta_train.npz"), allow_pickle=True)
@@ -103,7 +103,7 @@ def process_year(year):
         return True
 
     except Exception as e:
-        logging.error(f"❌ Error processing {year}: {e}")
+        logging.error(f" Error processing {year}: {e}")
         return False
 
 # === Run in parallel using 30 threads ===
@@ -115,7 +115,7 @@ with ThreadPoolExecutor(max_workers=max_workers) as executor:
         try:
             future.result()
         except Exception as exc:
-            logging.error(f"🚨 {year} failed unexpectedly: {exc}")
+            logging.error(f" {year} failed unexpectedly: {exc}")
 
-logging.info("🎉 All years processed.")
+logging.info(" All years processed.")
  
