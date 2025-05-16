@@ -10,7 +10,19 @@ This repository contains the dataset and code for our research on concept drift 
      - **Malware**: `vt_detection >= 4`
      - **Unsure**: `1 <= vt_detection <= 3`
    - SHA-256 hashes for each category and year will be written into separate text files.
+   ```
+   ├── malware/
+   │   ├── 2013/hashes.txt
+   │   ├── 2014/hashes.txt
+   │   └── ...
+   ├── benign/
+   │   ├── 2013/hashes.txt
+   │   ├── 2014/hashes.txt
+   │   └── ...
+   ```
    - An HTML report summarizing the count of hashes per category and year will be generated.
 3. **Run `APKDownloader.sh` to download samples as per need**:
 	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
-4.
+4. After downloading and organizing the APKs into year-wise folders, run the feature extractor to process the APKs.
+   - Usage: `python ./dataset_preparation/drebin-feature-extractor/extractor.py --input_dir ./androzoo_malware/2013/ --result_dir ./output/malware/2013/`
+5. 
