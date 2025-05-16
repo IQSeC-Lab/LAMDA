@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 csv_path = "/home/shared-datasets/Feature_extraction/all_hash_added_year_month_with_label_and_ym_and_family.csv"
 df = pd.read_csv(csv_path)
 df['sha256'] = df['sha256'].str.lower()
-print("✅ CSV loaded")
+print("CSV loaded")
 
 # Change the path to your extracted .data file and folder organization is
 # year___ malware
@@ -26,7 +26,7 @@ def get_features(file_list):
                 content = file.read().replace('\n', ',').strip(',')
                 features.append(content.split(','))
         except FileNotFoundError:
-            print(f"⚠ Missing file: {f}")
+            print(f"Missing file: {f}")
             continue
     return np.array(features, dtype=object)
 
@@ -58,7 +58,7 @@ def extract_save_features(df, data_path, test_size=0.2):
         # Drop rows with missing labels or families
         year_df = year_df.dropna(subset=["label", "family"])
         if len(year_df) == 0:
-            print(f"⚠ No matching hashes with valid labels/families for year {year}")
+            print(f"No matching hashes with valid labels/families for year {year}")
             continue
 
         # Train/test split
@@ -76,7 +76,7 @@ def extract_save_features(df, data_path, test_size=0.2):
             hashes = sub_df['sha256'].values
             return X, Y, Y_family, vt, ym, hashes
 
-        print(f"📦 Processing year {year} — train: {len(train_df)}, test: {len(test_df)}")
+        print(f"Processing year {year} — train: {len(train_df)}, test: {len(test_df)}")
 
         X_tr, y_tr, fam_tr, vt_tr, ym_tr, hash_tr = prepare_data(train_df)
         X_te, y_te, fam_te, vt_te, ym_te, hash_te = prepare_data(test_df)
@@ -89,7 +89,7 @@ def extract_save_features(df, data_path, test_size=0.2):
                  X_test=X_te, Y_test=y_te, Y_te_family=fam_te,
                  Y_te_vt=vt_te, Y_te_ym=ym_te, Y_te_hash=hash_te)
 
-        print(f"✅ Saved train/test .npz for year {year}\n")
+        print(f"Saved train/test .npz for year {year}\n")
 
 # Run the extraction
 extract_save_features(df, data_path)

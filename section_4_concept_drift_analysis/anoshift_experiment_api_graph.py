@@ -184,7 +184,7 @@ def run_model_monthwise(model_name, train_file, test_dir, run_id, output_file):
             results.append(metrics)
 
     pd.DataFrame(results).to_csv(output_file, index=False)
-    print(f"✅ Saved results to {output_file}")
+    print(f"Saved results to {output_file}")
     process = psutil.Process(os.getpid())
     memory_info = process.memory_info()
     print(f"Final Resident memory (RAM) used: {memory_info.rss / 1024 ** 2} MB")

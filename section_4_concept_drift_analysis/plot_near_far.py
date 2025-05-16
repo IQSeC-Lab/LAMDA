@@ -94,7 +94,7 @@ def plot_f1_for_all_models(df, output_path="f1_by_model_with_errorbands.png"):
     plt.tight_layout()
     plt.savefig(output_path, dpi=300)
     plt.close()
-    print(f"[✔] Plot saved to: {output_path}")
+    print(f"Plot saved to: {output_path}")
 
 def main():
     parser = argparse.ArgumentParser(description="Plot F1-score for all models from CSVs in a directory.")
