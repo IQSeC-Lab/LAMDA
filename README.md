@@ -32,4 +32,14 @@ This repository contains the dataset and code for our research on concept drift 
       --result_dir ./output/malware/2013/
    ```
    - After completing this process, you will have all the .data files containing Drebin-style features ready.
-5. 
+5. **Now, we are ready with features. Let's extract the family labels with the help of Virustotal and AVClass**.
+   - First collect academic API access for the virustotal
+   - Use the virustotal-downloader.py to download all reports from virustotal
+   - Usage: `python virustotal-downloader.py all_year_malware_hashes.txt`
+   - To make these JSON files usable for AVClass, we need to convert them into compact JSONL format.
+   - Use the jsoncompact.py to compact all the json file
+   - Usage: `python jsoncompact.py <directory_with_json_files>`
+   - Install AVClass from [here](https://github.com/malicialab/avclass.git)
+   - Now run avclass to get the family labels
+   - Usage `avclass -d ./all_year_vt_json/ -hash sha256 -o labels.txt`
+   - Now we are ready with features and family labels.
