@@ -99,8 +99,8 @@ def plot_yearwise_tsne_grid_same_scale(split_dir='npz_yearwise_Final',
     plt.tight_layout()
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
-    print(f"[✔] Saved t-SNE grid plot to: {output_file}")
-    print(f"[✔] Embeddings saved in: {save_npz_dir}")
+    print(f"Saved t-SNE grid plot to: {output_file}")
+    print(f"Embeddings saved in: {save_npz_dir}")
 
 # === Entry point ===
 if __name__ == "__main__":

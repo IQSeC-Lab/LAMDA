@@ -163,16 +163,16 @@ def train_lightgbm(X, y):
     model = lgb.LGBMClassifier(
         boosting_type="gbdt",
         objective="binary",
-        n_estimators=5000,                # allow for longer training (early stopping will cut it)
-        learning_rate=0.02,               # slower learning rate for better convergence
-        num_leaves=256,                   # increased capacity
+        n_estimators=5000, 
+        learning_rate=0.02,    
+        num_leaves=256,     
         max_depth=-1,
-        min_child_samples=30,             # prevent overfitting on small noisy leaves
-        subsample=0.8,                    # row sampling (replacement for bagging_fraction)
+        min_child_samples=30,  
+        subsample=0.8,         
         subsample_freq=1,
-        colsample_bytree=0.8,             # feature sampling (replacement for feature_fraction)
-        reg_alpha=1.5,                    # stronger L1 regularization
-        reg_lambda=1.5,                   # stronger L2 regularization
+        colsample_bytree=0.8, 
+        reg_alpha=1.5,           
+        reg_lambda=1.5, 
         max_bin=255,
         n_jobs=8,
         verbose=-1,
@@ -309,7 +309,7 @@ def run_model(model_name, train_dir, test_dir, run_id, output_file):
                 results.append(metrics)
 
     pd.DataFrame(results).to_csv(output_file, index=False)
-    print(f"✅ Saved results to {output_file}")
+    print(f"Saved results to {output_file}")
     process = psutil.Process(os.getpid())
     memory_info = process.memory_info()
     print(f"Final Resident memory (RAM) used: {memory_info.rss / 1024 ** 2} MB")

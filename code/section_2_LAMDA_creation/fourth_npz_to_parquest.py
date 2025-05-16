@@ -97,7 +97,7 @@ def process_year(year):
         df_test_full.to_parquet(test_out, index=False)
 
         logging.info(
-            f"✅ {year} saved: {train_out}, {test_out} | "
+            f"{year} saved: {train_out}, {test_out} | "
             f"train shape: {df_train_full.shape}, test shape: {df_test_full.shape}"
         )
         return True

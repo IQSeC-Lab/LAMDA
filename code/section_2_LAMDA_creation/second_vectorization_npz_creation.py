@@ -88,7 +88,7 @@ with open(os.path.join(save_path, "vocabulary_selected.txt"), "w") as f:
     for word in vocab_after_selection:
         f.write(f"{word}\n")
 
-print(f"✅ Saved selected vocabulary with {len(vocab_after_selection)} features.")
+print(f"Saved selected vocabulary with {len(vocab_after_selection)} features.")
 
 
 # Save VarianceThreshold object
@@ -148,6 +148,6 @@ for year in tqdm(years):
                         year_month=te['Y_te_ym'],
                         hash=te['Y_te_hash'])
 
-print("✅ All raw and transformed data saved yearwise. Variance selector saved.")
+print("All raw and transformed data saved yearwise. Variance selector saved.")
 
 
