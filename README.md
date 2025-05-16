@@ -3,14 +3,14 @@ This repository contains the dataset and code for our research on concept drift 
 ### Steps to replicate the dataset creation process
 1. **Ensure that the input CSV file is available**:
    - Download the latest dataset from AndroZoo: [latest_with-added-date.csv.gz](https://androzoo.uni.lu/static/lists/latest_with-added-date.csv.gz).
-
-2. **Run the `AndroZoo-extractor.py`**:
+   - Please be aware of this sample: BC564D52C6E79E1676C19D9602B1359A33B8714A1DC5FCB8ED602209D0B70266. It contains a comma (,) in its package name, which might break your custom code. Try replacing the comma with a dot (.), as we will not be needing the package name.
+2. **Run `APKDownloader.sh` to download samples as per need**:
+	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
+3. **Run the `AndroZoo-extractor.py`**:
    - This will process the CSV file and categorize the data into three groups based on `vt_detection`:
      - **Benign**: `vt_detection == 0`
      - **Malware**: `vt_detection >= 4`
      - **Unsure**: `1 <= vt_detection <= 3`
    - SHA-256 hashes for each category and year will be written into separate text files.
    - An HTML report summarizing the count of hashes per category and year will be generated.
-3. **Run `APKDownloader.sh` to download samples as per need**:
-	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
 4.
