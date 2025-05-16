@@ -23,6 +23,13 @@ This repository contains the dataset and code for our research on concept drift 
    - An HTML report summarizing the count of hashes per category and year will be generated.
 3. **Run `APKDownloader.sh` to download samples as per need**:
 	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
-4. After downloading and organizing the APKs into year-wise folders, run the feature extractor to process the APKs.
-   - Usage: `python ./dataset_preparation/drebin-feature-extractor/extractor.py --input_dir ./androzoo_malware/2013/ --result_dir ./output/malware/2013/`
+   - Another Usage: `bash APKDownloader.sh /malware/2018/hashes.txt 2018 mal YOUR_API_KEY`
+4. **After downloading and organizing the APKs into year-wise folders, run the feature extractor to process the APKs.**
+   - Usage: 
+   ```bash
+   python ./dataset_preparation/drebin-feature-extractor/extractor.py \
+      --input_dir ./androzoo_malware/2013/ \
+      --result_dir ./output/malware/2013/
+   ```
+   - After completing this process, you will have all the .data files containing Drebin-style features ready.
 5. 
