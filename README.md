@@ -146,7 +146,4 @@ For LAMDA experiments, go through the following instructions to recreate the res
    4_5_shap_explanation_graphs.py 
    ```
    run this file to generate graphs shap_explanation_drift_monthly_top_100_features_apigraph.png, shap_explanation_drift_monthly_top_1000_features_apigraph.png, shap_explanation_drift_monthly_top_100_features_lamda.png and shap_explanation_drift_monthly_top_1000_features_lamda.png
-   ```
-
-
 
