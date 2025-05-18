@@ -356,7 +356,7 @@ def run_explanation_parallely_monthly(topk):
                 shape_importance_by_year_month[ym_key].extend(year_importances[ym_key])
 
     
-    output_file = f"shap_top_indices_by_month_nyears_12_top_k_{top_k}_nrun_5_X_train_100_X_test_100_parallel_new_newsplit_apigraph.txt"  # Specify the output file name
+    output_file = "top_shap_indices_{top_k}_apigraph.txt"
     
 
     # Write shap_top_indices_by_year to the file
@@ -366,7 +366,7 @@ def run_explanation_parallely_monthly(topk):
     print(f"shap_top_indices_by_year_month has been written to {output_file}")
 
 
-    output_file = f"shape_importance_by_month_nyears_12_top_k_{top_k}_nrun_5_X_train_100_X_test_100_parallel_new_newsplit_apigraph.txt"  # Specify the output file name
+    output_file = "top_shap_importance_{top_k}_apigraph.txt"
 
     # Write shap_top_indices_by_year to the file
     with open(output_file, "w") as file:
