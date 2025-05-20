@@ -172,27 +172,29 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Machine learning (ML)-based malware detection systems often fail to account for the dynamic nature of 
-            real-world training and test data distributions. In practice, these distributions evolve due to 
-            frequent changes in the Android ecosystem, adversarial development of new malware families, 
-            and the continuous emergence of both benign and malicious applications. 
-            Prior studies have shown that such {\em concept drift} --- distributional shifts in benign and malicious samples, 
-            leads to significant degradation in detection performance over time. Despite the practical importance of this issue, 
-            existing datasets are often outdated and limited in temporal scope, diversity of malware families, 
-            and sample scale, making them insufficient for the systematic evaluation of concept drift in malware detection. 
+          Machine learning (ML)-based malware detection systems often fail to account for the dynamic nature of real-world training and test data distributions. 
+            In practice, these distributions evolve due to frequent changes in the Android ecosystem,
+            adversarial development of new malware families, and the continuous emergence of both benign and
+            malicious applications. Prior studies have shown that such concept drift—distributional shifts in benign and malicious samples, leads to
+            significant degradation in detection performance over time. Despite the practical importance of this issue, 
+            existing datasets are often outdated and limited in temporal scope, diversity of malware families, and sample scale, making them insufficient
+            for the systematic evaluation of concept drift in malware detection.
           </p>
           <p>
-          To address this gap, we present \system, the largest and most temporally diverse Android malware benchmark to date, 
-            designed specifically for concept drift analysis. \system~spans 12 years (2013–2025, excluding 2015), 
-            includes over 1 million samples (approximately 37\% labeled as malware), 
-            and covers more than 1,400 malware families and 180,000 singleton samples, 
-            reflecting the natural distribution and evolution of real-world Android applications. 
-            We empirically demonstrate \system's utility by quantifying the performance degradation of 
-            standard ML models over time and analyzing feature stability across years. 
-            As the most comprehensive Android malware dataset to date, 
-            \system~enables in-depth research into temporal drift and generalization, 
-            explainability, and evolving detection challenges. 
+To address this gap, we present LAMDA, the largest and most temporally diverse
+            Android malware benchmark to date, designed specifically for concept drift analysis. 
+            LAMDA spans 12 years (2013–2025, excluding 2015), includes over 1 million 
+            samples (approximately 37% labeled as malware), and covers 1,380 malware families
+            and 150,000 singleton samples, reflecting the natural distribution and evolution
+            of real-world Android applications. We empirically demonstrate LAMDA’s utility16
+            by quantifying the performance degradation of standard ML models over time
+            and analyzing feature stability across years. As the most comprehensive 
+            Android malware dataset to date, LAMDA enables in-depth research 
+            into temporal drift, generalization, explainability, and evolving detection challenges. 
+            
+            
             The dataset and code are available at \url{https://iqsec-lab.github.io/LAMDA/}.
+
           </p>
 
         </div>
