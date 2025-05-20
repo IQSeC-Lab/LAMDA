@@ -261,25 +261,18 @@
           <p>
             <ul>
               <li>
-                A large-scale Android malware benchmark comprising over 1 million
-                APKs across 1,430 unique families, spanning 2013–2025 (excluding 2015), with additional
-                singleton samples. It is the most temporally comprehensive dataset for Android malware
-                analysis to date.
+                We present LAMDA, a large-scale Android malware benchmark consisting of over 1 million APKs across 1,380 unique families, spanning 12 years (2013 to 2025, excluding 2015). LAMDA is built on static features derived from the Drebin feature set.
               </li>
               <li>
-                Built on execution-free static features—API calls, permissions, and manifest
-                components—extracted using a standardized schema, enabling scalable, reproducible,
-                and temporally aligned drift analysis.
+                We conduct longitudinal evaluations using structured temporal splits, analyze per-feature distribution shifts, and perform feature stability analysis across malware families.
               </li>
               <li>
-                Longitudinal evaluations under temporal drift using structured splits, showing that
-                malware classifiers degrade significantly over time and that family-level behavior
-                evolves in measurable, feature-space terms.
+                LAMDA enables explanation-driven drift analysis using SHapley Additive exPlanations (SHAP), supporting investigations into how feature importance changes as malware evolves.
               </li>
-              <li>
+<!--               <li>
                 Facilitates explanation-driven drift analysis through SHAP-based attributions,
                 supporting investigations into how feature importance shifts as malware evolves.  
-              </li>
+              </li> -->
              </ul>
           </p>
         </div>
@@ -323,7 +316,7 @@
           <p>
             <ul>
               <li>
-While <b>LAMDA</b> provides a strong foundation for studying concept drift in malware analysis, we acknowledge a few limitations. It relies exclusively on static features, omitting dynamic behaviors observable only at runtime. While prior work suggests a 10:90 malware-to-benign ratio, \textsc{LAMDA} attempts to maintain a 50:50 ratio, which may be viewed as downplaying the role of benign software distributions. However, we argue that \textsc{LAMDA} is constructed as a challenging dataset with greater family diversity and balanced class distribution. As such, LAMDA will facilitate the investigation of detectors that are more resilient to distributional shifts and capable of generalizing across a broad spectrum of evolving malware behaviors.              </li>
+While <b>LAMDA</b> provides a strong foundation for studying concept drift in malware analysis, we acknowledge a few limitations. It relies exclusively on static features, omitting dynamic behaviors observable only at runtime. While prior work suggests a 10:90 malware-to-benign ratio, LAMDA attempts to maintain a 50:50 ratio, which may be viewed as downplaying the role of benign software distributions. However, we argue that LAMDA is constructed as a challenging dataset with greater family diversity and balanced class distribution. As such, LAMDA will facilitate the investigation of detectors that are more resilient to distributional shifts and capable of generalizing across a broad spectrum of evolving malware behaviors.              </li>
 <!--               <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </li> -->
