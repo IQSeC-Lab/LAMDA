@@ -212,6 +212,53 @@ To address this gap, we present LAMDA, the largest and most temporally diverse
         <div class="content has-text-justified">
           <p>
             <ul>
+  <li>
+    <b>Dataset Construction:</b> Over 1 million APKs (2013–2025, excluding 2015) were collected from the AndroZoo repository. A 20% overhead was included to account for download and decompilation failures. APKs were organized into year-based directories: <code>[year]/malware/</code> and <code>[year]/benign/</code>.
+  </li>
+  <li>
+    <b>Label Assignment:</b> Binary labels were assigned using VirusTotal (VT) results:
+    <ul>
+      <li><b>Benign:</b> vt_detection = 0</li>
+      <li><b>Malware:</b> vt_detection ≥ 4</li>
+      <li><b>Uncertain:</b> vt_detection ∈ [1, 3] (discarded)</li>
+    </ul>
+    50,000 malware and 50,000 benign samples were collected per year (except for years with insufficient data), preserving month-wise distributions to reduce sampling bias.
+  </li>
+  <li>
+    <b>Static Feature Extraction (Drebin-inspired):</b> Each APK was decompiled using <code>apktool</code> to extract static features:
+    <ul>
+      <li>From <code>AndroidManifest.xml</code>: permissions, components (activities, services, receivers), hardware features, intent filters</li>
+      <li>From <code>smali</code> code: restricted/suspicious API calls, hardcoded URLs/IPs</li>
+    </ul>
+  </li>
+  <li>
+    <b>Family Labeling:</b> AVClass2 was used to standardize malware family labels using VirusTotal reports. Labels were linked to APKs using SHA256 hashes to support multi-class and temporal malware analysis.
+  </li>
+  <li>
+    <b>Vectorization & Preprocessing:</b> Extracted features were vectorized into high-dimensional binary vectors using a bag-of-tokens approach. A global vocabulary (~9.69M tokens) was constructed. Dimensionality was reduced using <code>VarianceThreshold</code> (threshold = 0.001), resulting in 4,561 final features.
+  </li>
+  <li>
+    <b>Data Splitting:</b> Each year’s data was split using stratified sampling:
+    <ul>
+      <li><b>Training:</b> 80%</li>
+      <li><b>Testing:</b> 20%</li>
+    </ul>
+    Class balance was maintained within each split.
+  </li>
+  <li>
+    <b>Storage & Format:</b> Final datasets were saved in both <code>.npz</code> (sparse matrix) and <code>.parquet</code> (tabular) formats. Each year’s folder includes:
+    <ul>
+      <li><code>X_train.parquet</code></li>
+      <li><code>X_test.parquet</code></li>
+    </ul>
+    Metadata columns include: <code>hash</code>, <code>label</code>, <code>family</code>, <code>vt_count</code>, <code>year_month</code>, followed by binary features.
+  </li>
+  <li>
+    <b>Scalability Support:</b> Released global vocabulary, selected features, and preprocessing objects (e.g., <code>VarianceThreshold</code>) to enable integration with ML pipelines, including Hugging Face.
+  </li>
+</ul>
+
+<!--             <ul>
               <li>
                 <b>Dataset Construction:</b> Over 1.03 million APKs (2013–2025, excluding 2015) were collected from the AndroZoo repository and labeled based on VirusTotal scan results: benign (vt_detection = 0), malware (vt_detection ≥ 4), and uncertain (vt_detection ∈ [1, 3], discarded). Samples were organized into [year]/malware/ and [year]/benign/ directories.
                 <li>
@@ -223,7 +270,7 @@ To address this gap, we present LAMDA, the largest and most temporally diverse
               <li>
                 <b>Storage & Family Labeling:</b> Processed data was saved as .npz files (monthly/yearly), each containing features (X), labels (y), SHA256 hashes, and AVClass2-generated malware family names — enabling both binary and multi-class classification tasks.   
               </li>
-              </ul>
+              </ul> -->
           </p>
         </div>
       </div>
