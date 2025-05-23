@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Base path
-BASE_PATH = "/home/mkamol/family_info/LAMDA/Baseline"
+BASE_PATH = "/home/mkamol/family_info/LAMDA/Baseline" # download this from https://huggingface.co/datasets/IQSeC-Lab/LAMDA/tree/main/Baseline
 SAVE_DIR = "/home/mkamol/LAMDA/continual-learning"
 
 # Load all data
