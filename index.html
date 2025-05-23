@@ -332,22 +332,40 @@ To address this gap, we present LAMDA, the largest and most temporally diverse
 </section>
 
 
+
 <!-- How to Use this Dataset 101 -->
 
-<section class="section">
+<section id="how-to-use-lamda" class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">How to Use this Dataset 101</h2>
+        <h2 class="title is-3">How to Use the LAMDA Dataset</h2>
         <div class="content has-text-justified">
-          <p>
-            <li>
-<!--               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </li> -->
-            <li>
-<!--               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </li> -->
-          </p>
+          <p>Follow the steps below to install, load, explore the data in your projects.</p>
+
+          <h3 class="subtitle is-5">1. Install the <strong>datasets</strong> library</h3>
+          <pre><code>pip install datasets</code></pre>
+          <pre><code>pip install huggingface_hub[hf_xet] #required for XET downloading support</code></pre>
+
+          <h3 class="subtitle is-5">2. Load the dataset</h3>
+          <pre><code>from datasets import load_dataset
+
+dataset = load_dataset('IQSeC-Lab/LAMDA', 'Baseline')
+# Check available splits
+dataset.keys()</code></pre>
+
+          <h3 class="subtitle is-5">3. Inspect splits & features</h3>
+          <pre><code>
+# Peek a sample record
+print(dataset['train'][0])</code></pre>
+
+          <h3 class="subtitle is-5">4. Usage examples</h3>
+          <p><strong>Convert to pandas DataFrame:</strong></p>
+          <pre><code>import pandas as pd
+
+df = pd.DataFrame(dataset['train'][:100])
+print(df.head())</code></pre>
+
 
         </div>
       </div>
