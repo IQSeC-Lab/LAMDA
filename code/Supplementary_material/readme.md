@@ -27,8 +27,14 @@ python label_noise.py
 To run this, you need to download metadata.csv from huggingface dataset repository.
 
 ## F. Label Drift Across Years Based on VirusTotal Label Changes
-Year-wise analysis of evolving VirusTotal labels.
-
+Year-wise analysis of evolving VirusTotal labels. We have already shared the current AV detection result from Virustotal vs The Androzoo Repository metadata in vt_detections.csv along with the sample added year.
+```
+python analyze_vt_stats.py.py
+```
+This script will generate the table that has been provided in the paper. In order to generate a plot based on the data from the previous script run the below script.
+```
+python plot-detection_drift_by_year.py
+```
 ## I. SHAP-Based Explanation Drift
 Temporal trends in top 1000 feature attributions.
 
