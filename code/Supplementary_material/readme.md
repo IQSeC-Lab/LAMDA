@@ -53,7 +53,7 @@ run this file to generate graphs shap_explanation_drift_monthly_top_100_features
 ## J. Continual Learning on LAMDA
 To run the Class-IL and Domain-IL. We need to prepare two different datset. For the Domain-IL, it is already available. For the Class-IL, we need to run the following command first to prepare the Baseline variant for Class-IL experiments.
 ```
-python continual_learning/dataset-gen-continual-learning.py.py 
+python continual_learning/dataset-gen-continual-learning.py
 ```
 Then run the run-experiments.sh script to runn both CLass-IL and Domain-IL experiment for 3 times.
 ```
