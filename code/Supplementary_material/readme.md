@@ -38,17 +38,29 @@ python plot-detection_drift_by_year.py
 ## I. SHAP-Based Explanation Drift
 Temporal trends in top 1000 feature attributions.
 ```
-concept_drift_analysis/4_5_shap_explanation_monthly_lamda.py
+python concept_drift_analysis/4_5_shap_explanation_monthly_lamda.py
 ```
 run this file to generate top 100 and top 1000 SHAP indices from lamda dataset and store in file top_shap_indices_100_lamda.txt and top_shap_indices_1000_lamda.txt
 ```
-concept_drift_analysis/4_5_shap_explanation_monthly_apigraph.py
+python concept_drift_analysis/4_5_shap_explanation_monthly_apigraph.py
 ```
 run this file to generate top 100 and top 1000 SHAP indices from apigraph dataset and store in file top_shap_indices_100_apigraph.txt and top_shap_indices_1000_apigraph.txt
 ```
-concept_drift_analysis/4_5_shap_explanation_graphs.py 
+python concept_drift_analysis/4_5_shap_explanation_graphs.py 
 ```
 run this file to generate graphs shap_explanation_drift_monthly_top_100_features_apigraph.png, shap_explanation_drift_monthly_top_1000_features_apigraph.png, shap_explanation_drift_monthly_top_100_features_lamda.png and shap_explanation_drift_monthly_top_1000_features_lamda.png
 
 ## J. Continual Learning on LAMDA
-Class- and domain-incremental learning benchmarks.
+To run the Class-IL and Domain-IL. We need to prepare two different datset. For the Domain-IL, it is already available. For the Class-IL, we need to run the following command first to prepare the Baseline variant for Class-IL experiments.
+```
+python continual_learning/dataset-gen-continual-learning.py.py 
+```
+Then run the run-experiments.sh script to runn both CLass-IL and Domain-IL experiment for 3 times.
+```
+bash run-experiments.sh
+```
+Run the for-graph.sh and for-table.sh to get the table and graph that was reported in our paper.
+```
+bash for-graph.sh 
+bash for-table.sh
+```
