@@ -37,6 +37,18 @@ python plot-detection_drift_by_year.py
 ```
 ## I. SHAP-Based Explanation Drift
 Temporal trends in top 1000 feature attributions.
+```
+concept_drift_analysis/4_5_shap_explanation_monthly_lamda.py
+```
+run this file to generate top 100 and top 1000 SHAP indices from lamda dataset and store in file top_shap_indices_100_lamda.txt and top_shap_indices_1000_lamda.txt
+```
+concept_drift_analysis/4_5_shap_explanation_monthly_apigraph.py
+```
+run this file to generate top 100 and top 1000 SHAP indices from apigraph dataset and store in file top_shap_indices_100_apigraph.txt and top_shap_indices_1000_apigraph.txt
+```
+concept_drift_analysis/4_5_shap_explanation_graphs.py 
+```
+run this file to generate graphs shap_explanation_drift_monthly_top_100_features_apigraph.png, shap_explanation_drift_monthly_top_1000_features_apigraph.png, shap_explanation_drift_monthly_top_100_features_lamda.png and shap_explanation_drift_monthly_top_1000_features_lamda.png
 
 ## J. Continual Learning on LAMDA
 Class- and domain-incremental learning benchmarks.
