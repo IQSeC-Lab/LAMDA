@@ -147,4 +147,4 @@ For LAMDA experiments, go through the following instructions to recreate the res
    ```
    run this file to generate graphs shap_explanation_drift_monthly_top_100_features_apigraph.png, shap_explanation_drift_monthly_top_1000_features_apigraph.png, shap_explanation_drift_monthly_top_100_features_lamda.png and shap_explanation_drift_monthly_top_1000_features_lamda.png
 
-[**Check the Supplementary Sections here**]([https://example.com/supplementary](https://github.com/IQSeC-Lab/LAMDA/tree/main/code/Supplementary_material))
+[Check the Supplementary Sections here](https://github.com/IQSeC-Lab/LAMDA/tree/main/code/Supplementary_material)
