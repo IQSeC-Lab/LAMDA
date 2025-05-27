@@ -2,6 +2,7 @@
 This repository contains the dataset and code for our research on concept drift in Android malware detection. **LAMDA** is designed to help researchers analyze the evolving nature of Android malware by capturing temporal variations and distribution shifts over time.
 Our dataset is publicly available on Hugging Face:
 
+[**LAMDA Paper**](https://arxiv.org/abs/2505.18551)
 [**LAMDA Dataset**](https://huggingface.co/datasets/IQSeC-Lab/LAMDA)
 
 ### Steps to replicate the dataset creation process
