@@ -25,8 +25,8 @@ Our dataset is publicly available on Hugging Face:
    ```
    - An HTML report summarizing the count of hashes per category and year will be generated.
 3. **Run `APKDownloader.sh` to download samples as per need**:
-	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
-   - Another Usage: `bash APKDownloader.sh /malware/2018/hashes.txt 2018 mal YOUR_API_KEY`
+	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_ANDROZOO_API_KEY`
+   - Another Usage: `bash APKDownloader.sh /malware/2018/hashes.txt 2018 mal YOUR_ANDROZOO_API_KEY`
 4. **After downloading and organizing the APKs into year-wise folders, run the feature extractor to process the APKs.**
    - Usage: 
    ```bash
