@@ -2,8 +2,6 @@
 This repository contains the dataset and code for our research on concept drift in Android malware detection. **LAMDA** is designed to help researchers analyze the evolving nature of Android malware by capturing temporal variations and distribution shifts over time.
 Our dataset is publicly available on Hugging Face:
 
-<!-- [**LAMDA Paper**](https://arxiv.org/abs/2505.18551) -->
-[**LAMDA Dataset**](https://huggingface.co/datasets/IQSeC-Lab/LAMDA)
 
 ### Steps to replicate the dataset creation process
 1. **Ensure that the input CSV file is available**:
@@ -52,7 +50,7 @@ Our dataset is publicly available on Hugging Face:
 ## Section 3: LAMDA Creation
 After downloading and decompiling all the APKs, the creation of **LAMDA** is the following:
 
-First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file which you can find from LAMDA huggingface repository [here](https://huggingface.co/datasets/IQSeC-Lab/LAMDA/tree/main)
+First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv.gz file.
    ```
    ├── malware/
    │   ├── 2013/hashes.data ...
