@@ -3,7 +3,7 @@ import pandas as pd
 
 # Base path
 BASE_PATH = "/home/mkamol/family_info/LAMDA/Baseline" # download this from https://huggingface.co/datasets/IQSeC-Lab/LAMDA/tree/main/Baseline
-SAVE_DIR = "/home/mkamol/LAMDA/continual-learning"
+SAVE_DIR = "/home/mkamol/LAMDA/continual-learning/Class-IL-Dataset/"
 
 # Load all data
 def load_all_data():
