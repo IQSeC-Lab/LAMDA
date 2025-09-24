@@ -4,12 +4,12 @@ After downloading and decompiling all the APKs, the creation of **LAMDA** is the
 First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file.
    ```
    ├── malware/
-   │   ├── 2013/hashes.txt
-   │   ├── 2014/hashes.txt
+   │   ├── 2013/hashes.data
+   │   ├── 2014/hashes.data
    │   └── ...
    ├── benign/
-   │   ├── 2013/hashes.txt
-   │   ├── 2014/hashes.txt
+   │   ├── 2013/hashes.data
+   │   ├── 2014/hashes.data
    │   └── ...
    ```
 
