@@ -1,5 +1,5 @@
 # Section 3: LAMDA Creation
-_Note: The whole dataset is already available on Zenedo. You can just download and start working with that if you don't wish to add new samples.
+_Note: The whole dataset is already available on Zenedo https://zenodo.org/records/17188597 . You can just download and start working with that if you don't wish to add new samples.
 
 
 After downloading and decompiling all the APKs, the creation of **LAMDA** is the following:
