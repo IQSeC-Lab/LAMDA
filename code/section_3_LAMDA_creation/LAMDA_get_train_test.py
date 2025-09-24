@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # === Load the CSV ===
-csv_path = "/metadata.csv"
+csv_path = "./metadata.csv" # use the metadata.csv.gz
 
 # This csv file is the combination of metadata from AndroZoo (https://androzoo.uni.lu/static/lists/latest_with-added-date.csv.gz)
 # and collected family label from AVClass
@@ -19,7 +19,7 @@ print("CSV loaded")
 # year___ malware
 #   |____ benign
 
-data_path = '/home/shared-datasets/Feature_extraction/data_file_by_year'
+data_path = '/home/shared-datasets/Feature_extraction/data_file_by_year' # where u have all the .data file
 output_path = 'Final_AZ_Data'
 os.makedirs(output_path, exist_ok=True)
 
