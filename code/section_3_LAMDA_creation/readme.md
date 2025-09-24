@@ -1,7 +1,7 @@
 # Section 3: LAMDA Creation
 After downloading and decompiling all the APKs, the creation of **LAMDA** is the following:
 
-First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file which you can find from LAMDA huggingface repository [here](https://huggingface.co/datasets/IQSeC-Lab/LAMDA/tree/main)
+First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file.
    ```
    ├── malware/
    │   ├── 2013/hashes.txt
