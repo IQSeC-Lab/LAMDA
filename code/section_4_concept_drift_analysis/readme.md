@@ -17,6 +17,12 @@ For LAMDA experiments, go through the following instructions to recreate the res
    ```
    ./4_1_anoshift_script_LAMDA.sh
    ```
+   To run detectBERT and ViT, use the following command. You will need to provide the dataset name (lamda or apigraph) to run the code as well as need to provide the actual dataset directory link inside the code. 
+   
+   ```
+   python vit.py --dataset lamda
+   python detectBERT.py --dataset lamda
+   ```
 
 3. **Plots and visualization**
    F1-scores across the years for four models
