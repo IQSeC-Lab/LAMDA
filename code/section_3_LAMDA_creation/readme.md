@@ -1,4 +1,7 @@
 # Section 3: LAMDA Creation
+_Note: The whole dataset is already available on Zenedo. You can just download and start working with that if you don't wish to add new samples.
+
+
 After downloading and decompiling all the APKs, the creation of **LAMDA** is the following:
 
 First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file.
