@@ -4,27 +4,17 @@ import numpy as np
 import pandas as pd
 from scipy.sparse import load_npz, save_npz
 from collections import defaultdict
-from huggingface_hub import snapshot_download, login
 
 
-def process_npz_files(hf_token: str):
-    # Login with provided HF token
-    login(token=hf_token)
+def process_npz_files(local_root: str = "LAMDA_dataset"):
+    # Dataset available at:
+    # https://zenodo.org/records/17188597
+    # (Manually download NPZ/Parquet files into LAMDA_dataset/NPZ_Version/)
 
-    # Download only the npz_Baseline folder from the repo
-    snapshot_download(
-        repo_id="IQSeC-Lab/LAMDA",
-        repo_type="dataset",
-        allow_patterns="NPZ_Version/npz_Baseline/**",
-        local_dir="LAMDA_dataset"  # where to save locally
-    )
-
-    # Directories
-    input_root = "./LAMDA_dataset/NPZ_Version"
-    output_root = "./LAMDA_dataset/NPZ_Version"
+    input_root = os.path.join(local_root, "NPZ_Version")
+    output_root = input_root
     os.makedirs(output_root, exist_ok=True)
 
-    # Years and splits
     years = [2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
     splits = ["train", "test"]
     list_dir = ['npz_Baseline']
@@ -57,7 +47,6 @@ def process_npz_files(hf_token: str):
                     year_month = meta["year_month"]
                     hashes = meta["hash"]
 
-                    # Group by year_month
                     ym_indices = defaultdict(list)
                     for idx, ym in enumerate(year_month):
                         if ym != "unknown":
@@ -65,7 +54,6 @@ def process_npz_files(hf_token: str):
                         else:
                             skipped_samples += 1
 
-                    # Save each group
                     for ym, indices in ym_indices.items():
                         ym_X = X[indices]
                         ym_y = y[indices]
@@ -74,7 +62,6 @@ def process_npz_files(hf_token: str):
                         ym_ym = year_month[indices]
                         ym_hash = hashes[indices]
 
-                        # Save files
                         save_npz(os.path.join(split_output_dir, f"{ym}_X_{split}.npz"), ym_X)
                         np.savez_compressed(
                             os.path.join(split_output_dir, f"{ym}_meta_{split}.npz"),
@@ -94,13 +81,11 @@ def process_npz_files(hf_token: str):
                 except Exception as e:
                     print(f"Skipping {year} {split} in {var_dir} due to error: {e}")
 
-            # Save summary for this split
             summary_df = pd.DataFrame(summary_records).sort_values(by="year_month")
             summary_path = os.path.join(split_output_dir, "year_month_split_summary.csv")
             summary_df.to_csv(summary_path, index=False)
             print(f"Saved summary to: {summary_path}")
 
-            # Log skipped
             if skipped_samples > 0:
                 print(f"Skipped {skipped_samples} samples due to 'unknown' year_month in {var_dir} {split}.")
             else:
@@ -109,7 +94,7 @@ def process_npz_files(hf_token: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process NPZ Baseline dataset monthwise.")
-    parser.add_argument("--hf_token", type=str, required=True, help="Your Hugging Face access token.")
+    parser.add_argument("--local_root", type=str, default="LAMDA_dataset", help="Path to local dataset root.")
     args = parser.parse_args()
 
-    process_npz_files(args.hf_token)
+    process_npz_files(local_root=args.local_root)
