@@ -2,7 +2,7 @@
 For LAMDA experiments, go through the following instructions to recreate the results
 
 1. **First, download LAMDA from LAMDA huggingface repository**
-   The following code will help you download LAMDA from huggingface repository, convert the parquet file to npz, split yearly npz into monthly npz for concept drift analysis on LAMDA
+   The following code will help you download LAMDA from Zenedo repository, convert the parquet file to npz, split yearly npz into monthly npz for concept drift analysis on LAMDA
    ```
    python download_dataset_and_convert_to_npz.py
    ```
