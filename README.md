@@ -1,6 +1,8 @@
 # LAMDA: A Longitudinal Android Malware Benchmark for Concept Drift Analysis
 This repository contains the dataset and code for our research on concept drift in Android malware detection. **LAMDA** is designed to help researchers analyze the evolving nature of Android malware by capturing temporal variations and distribution shifts over time.
 
+Note: The dataset (both **parquet** and **npz**) is already available on [Zenodo](https://zenodo.org/records/17188597). You can just download and start working with it directly if you don’t wish to add new samples. The dataset also includes a train–test split._
+
 
 ### Steps to replicate the dataset creation process
 1. **Ensure that the input CSV file is available**:
