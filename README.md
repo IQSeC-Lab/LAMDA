@@ -1,9 +1,12 @@
 # LAMDA: A Longitudinal Android Malware Benchmark for Concept Drift Analysis
 This repository contains the dataset and code for our research on concept drift in Android malware detection. **LAMDA** is designed to help researchers analyze the evolving nature of Android malware by capturing temporal variations and distribution shifts over time.
 
-Note: The dataset (both **parquet** and **npz**) is already available on [Zenodo](https://zenodo.org/records/17188597). You can just download and start working with it directly if you don’t wish to add new samples. The dataset also includes a train–test split.
+📌 Accepted at ICLR 2026
 
+Our dataset is publicly available on Hugging Face:
 
+<!-- [**LAMDA Paper**](https://arxiv.org/abs/2505.18551) -->
+[**LAMDA Dataset**](https://huggingface.co/datasets/IQSeC-Lab/LAMDA)
 
 ### Steps to replicate the dataset creation process
 1. **Ensure that the input CSV file is available**:
@@ -27,8 +30,8 @@ Note: The dataset (both **parquet** and **npz**) is already available on [Zenodo
    ```
    - An HTML report summarizing the count of hashes per category and year will be generated.
 3. **Run `APKDownloader.sh` to download samples as per need**:
-	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_ANDROZOO_API_KEY`
-   - Another Usage: `bash APKDownloader.sh /malware/2018/hashes.txt 2018 mal YOUR_ANDROZOO_API_KEY`
+	- Usage: `bash APKDownloader.sh /benign/2018/hashes.txt 2018 ben YOUR_API_KEY`
+   - Another Usage: `bash APKDownloader.sh /malware/2018/hashes.txt 2018 mal YOUR_API_KEY`
 4. **After downloading and organizing the APKs into year-wise folders, run the feature extractor to process the APKs.**
    - Usage: 
    ```bash
@@ -52,7 +55,7 @@ Note: The dataset (both **parquet** and **npz**) is already available on [Zenodo
 ## Section 3: LAMDA Creation
 After downloading and decompiling all the APKs, the creation of **LAMDA** is the following:
 
-First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv.gz file.
+First, you need to split all the .data files into train and test using the following code. Make sure you have all the .data files into yearly folders as followings and you have provided the correct metadata.csv file which you can find from LAMDA huggingface repository [here](https://huggingface.co/datasets/IQSeC-Lab/LAMDA/tree/main)
    ```
    ├── malware/
    │   ├── 2013/hashes.data ...
