@@ -8,6 +8,19 @@ Our dataset is publicly available on Hugging Face:
 <!-- [**LAMDA Paper**](https://arxiv.org/abs/2505.18551) -->
 [**LAMDA Dataset**](https://huggingface.co/datasets/IQSeC-Lab/LAMDA)
 
+## Citation
+```bibtex
+@inproceedings{haque2026lamda,
+  title     = {LAMDA: A Longitudinal Android Malware Benchmark for Concept Drift Analysis},
+  author    = {Haque, Md Ahsanul and Hossain, Ismail and Kamol, Md Mahmuduzzaman and Alam, Md Jahangir and
+               Amalapuram, Suresh Kumar and Talukder, Sajedul and Rahman, Mohammad Saidur},
+  booktitle = {The 14th International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=1FnCrZtBNQ}
+}
+
+```
+
 ### Steps to replicate the dataset creation process
 1. **Ensure that the input CSV file is available**:
    - Download the latest dataset from AndroZoo: [latest_with-added-date.csv.gz](https://androzoo.uni.lu/static/lists/latest_with-added-date.csv.gz).
